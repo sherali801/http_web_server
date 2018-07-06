@@ -1,0 +1,14 @@
+[unit]
+Description=Http Server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+restartSec=1
+ExecStart=/usr/bin/http_server
+
+[install]
+WantedBy=multi-user.target
+Alias=http_server.service
